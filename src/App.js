@@ -1,24 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import { Card, CardContent, Grid } from "@mui/material";
+import React from "react";
+import { Fruits } from "./components/Fruits";
+import { Colours } from "./components/Colours";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <Card sx={{bgcolor:"lightsalmon"}}>
+          <CardContent>
+              <Grid container spacing={2}>
+                  <Grid item xs={12}>
+                      <Fruits />
+                  </Grid>
+                  <Grid item xs={12}>
+                      <Colours />
+                  </Grid>
+              </Grid>
+          </CardContent>
+      </Card>
   );
 }
 
